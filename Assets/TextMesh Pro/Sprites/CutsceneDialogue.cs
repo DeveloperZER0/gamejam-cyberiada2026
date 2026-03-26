@@ -23,7 +23,7 @@ public class CutsceneDialogue : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenSentences);
         }
 
-        // przejście do gry
+        
         SceneManager.LoadScene("MainGame");
     }
 
