@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AchievementTracker : MonoBehaviour
 {
@@ -23,8 +24,8 @@ public class AchievementTracker : MonoBehaviour
     void Update()
     {
         // on clicking item marked as achievement set achievementShelf bitMask to 1 for that item
-        if(Input.GetMouseButtonDown(0)) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Mouse.current.leftButton.wasPressedThisFrame) {
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit)) {
                 if(hit.collider.CompareTag("AchievementItem")) {
