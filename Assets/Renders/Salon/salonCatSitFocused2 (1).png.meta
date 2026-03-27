@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2402c39e8e7ac40b4b8694e2469ffc60
+guid: 81a3094aa3c5d4dada7097db4930aea6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 553804002067501582
-    second: korytarz-flowerFocusRotated 1_0
-  - first:
-      213: -8767732486290638801
-    second: korytarz-flowerFocusRotated 1_1
+      213: 6129649031321715058
+    second: salonCatSitFocused2 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: korytarz-flowerFocusRotated 1_0
+      name: salonCatSitFocused2 (1)_0
       rect:
         serializedVersion: 2
-        x: 739
-        y: 160
-        width: 483
-        height: 767
+        x: 278
+        y: 67
+        width: 1532
+        height: 951
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e025c624ec18fa700800000000000000
-      internalID: 553804002067501582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: korytarz-flowerFocusRotated 1_1
-      rect:
-        serializedVersion: 2
-        x: 1239
-        y: 340
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f287ef4d1c1c25680800000000000000
-      internalID: -8767732486290638801
+      spriteID: 2718fb55153e01550800000000000000
+      internalID: 6129649031321715058
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      korytarz-flowerFocusRotated 1_0: 553804002067501582
-      korytarz-flowerFocusRotated 1_1: -8767732486290638801
+      salonCatSitFocused2 (1)_0: 6129649031321715058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

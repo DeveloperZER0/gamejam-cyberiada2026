@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4bb15e3925970486a810b76fa273bc96
+guid: 83073e4b242784f5e97a2536b06c2be4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1725557297058361070
-    second: small box  top_0
+      213: -8581362690235510737
+    second: salonCatSitStatic_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: small box  top_0
+      name: salonCatSitStatic_0
       rect:
         serializedVersion: 2
-        x: 521
-        y: 98
-        width: 885
-        height: 742
+        x: 938
+        y: 0
+        width: 286
+        height: 185
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 211d04dd7c69d08e0800000000000000
-      internalID: -1725557297058361070
+      spriteID: f20d8b76910e8e880800000000000000
+      internalID: -8581362690235510737
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      small box  top_0: -1725557297058361070
+      salonCatSitStatic_0: -8581362690235510737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
