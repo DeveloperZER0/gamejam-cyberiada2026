@@ -81,6 +81,11 @@ public class SceneSwitcher : MonoBehaviour
             return;
         }
 
+        if (targetIndex == currentSceneIndex)
+        {
+            return;
+        }
+
         StartCoroutine(FadeSwitch(targetIndex));
     }
 
@@ -156,7 +161,7 @@ public class SceneSwitcher : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            color.a = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            color.a = Mathf.Lerp(1f, 0f, t / fadeDuration);
             fadePanel.color = color;
             yield return null;
         }

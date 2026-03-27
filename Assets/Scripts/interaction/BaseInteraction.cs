@@ -15,6 +15,10 @@ public abstract class BaseInteraction : MonoBehaviour
 
       if (fadeObject != null) {
         fadePanel = fadeObject.GetComponent<Image>();
+        if (fadePanel != null) {
+          // Keep panel clickable behavior neutral when alpha is zero.
+          fadePanel.raycastTarget = false;
+        }
       }
     }
 
@@ -45,10 +49,6 @@ public abstract class BaseInteraction : MonoBehaviour
       }
 
       yield return FadeAlpha(1f, 0f);
-
-      if (fadeObject != null) {
-        fadeObject.SetActive(false);
-      }
     }
 
     private IEnumerator FadeAlpha(float from, float to) {
