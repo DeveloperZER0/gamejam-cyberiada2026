@@ -210,6 +210,149 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &148173220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148173221}
+  - component: {fileID: 148173223}
+  - component: {fileID: 148173222}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &148173221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148173220}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.26936, y: 0.20336, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 886739502}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148173222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148173220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e81d25deb59994284e4f5047eb2a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioMenager
+  clickClip: {fileID: 8300000, guid: 3c6e97025aa2df944b63fbadfb860c48, type: 3}
+--- !u!82 &148173223
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148173220}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &165287157
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +432,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: e78472ed98a86b14da24580496676eaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -768,7 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Cupboard_Salon
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!1 &347509347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 44b471ebb160db343be979bd81c3c4e1, type: 3}
 --- !u!61 &355349006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1170,6 +1313,7 @@ GameObject:
   - component: {fileID: 391405298}
   - component: {fileID: 391405299}
   - component: {fileID: 391405300}
+  - component: {fileID: 391405303}
   m_Layer: 6
   m_Name: kuchniaBOX1centerClosed
   m_TagString: InteractableObject
@@ -1239,7 +1383,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 081499f9d0a971242be67134c41393d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1333,7 +1477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Box1_Center
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!114 &391405302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1493,21 @@ MonoBehaviour:
   fadeObject: {fileID: 1130341760}
   fadeDuration: 0.5
   animator: {fileID: 391405300}
+--- !u!114 &391405303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391405296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09888ae44a6a5a34b82038b2475808dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  objectName: Nieznany
+  interaction: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!1 &404475367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Flower
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 6ab20f6c3f479af4dbf645a168045f92, type: 3}
 --- !u!212 &429289345
 SpriteRenderer:
   serializedVersion: 2
@@ -1685,7 +1844,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 121a88bae890d7e4299d0789a2eb76ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1874,7 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!114 &525784188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,7 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Pot
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: b64960d2fd6c7de44bb979f0eb5e9586, type: 3}
 --- !u!61 &542354606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2303,7 +2462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Oven
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 44b471ebb160db343be979bd81c3c4e1, type: 3}
 --- !u!61 &660115586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2686,7 +2845,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 2efe179d58fa5c64caf2a8de479805c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2727,7 +2886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Box1_Left
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!95 &842592750
 Animator:
   serializedVersion: 7
@@ -2811,7 +2970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &851033397
 Transform:
   m_ObjectHideFlags: 0
@@ -2964,6 +3123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 148173221}
   - {fileID: 890727615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3143,7 +3303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!95 &931390176
 Animator:
   serializedVersion: 7
@@ -3259,7 +3419,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 157354e1e8b33e5428ccf3e784f00fb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4015,7 +4175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!95 &1478443985
 Animator:
   serializedVersion: 7
@@ -4299,7 +4459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Wardrobe_Salon
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!61 &1521880342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4695,7 +4855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Wardrobe
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!114 &1660581377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4888,7 +5048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: e8ccb8e8f7aad4341b34a8ef42f15d91, type: 3}
 --- !u!61 &1716683130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5022,7 +5182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!61 &1787338414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5274,7 +5434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 06cea8006646ee94aa5a1b948804a7ce, type: 3}
 --- !u!61 &1875392244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5579,7 +5739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: BOX2
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!114 &1877073638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5850,7 +6010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Cupboard
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!114 &1968194617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6067,7 +6227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2126477338
 Transform:
   m_ObjectHideFlags: 0
@@ -6275,7 +6435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 177594e855605664ea582700e59b3cbe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

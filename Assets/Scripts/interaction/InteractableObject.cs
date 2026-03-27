@@ -44,7 +44,6 @@ public class InteractableObject : MonoBehaviour
     public void OnClicked()
     {
         Debug.Log($"ONCLICKED WYWOŁANE na obiekcie: {objectName}");
-
         // Dźwięk dla tego konkretnego obiektu
         if (AudioMenager.Instance != null)
         {
