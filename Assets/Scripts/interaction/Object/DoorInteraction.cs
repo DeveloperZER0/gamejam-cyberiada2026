@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class ChangeRoomInteraction : BaseInteraction
+public class DoorInteraction : BaseInteraction
 {
     [SerializeField] private SceneSwitcher sceneSwitcher;
-    [SerializeField] private string targetSceneName;
+    [SerializeField] private string targetSceneId;
 
-    public override void Interact() {
+    public override void Interact()
+    {
         if (sceneSwitcher == null)
         {
             sceneSwitcher = FindObjectOfType<SceneSwitcher>();
@@ -13,10 +14,10 @@ public class ChangeRoomInteraction : BaseInteraction
 
         if (sceneSwitcher == null)
         {
-            Debug.LogWarning("ChangeRoomInteraction: SceneSwitcher not found.");
+            Debug.LogWarning("DoorInteraction: SceneSwitcher not found.");
             return;
         }
 
-        sceneSwitcher.FadeToScene(targetSceneName);
+        sceneSwitcher.FadeToPseudoScene(targetSceneId);
     }
 }
