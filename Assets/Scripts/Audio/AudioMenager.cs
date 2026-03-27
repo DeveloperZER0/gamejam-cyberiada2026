@@ -1,13 +1,15 @@
 using UnityEngine;
 
+// Ten atrybut automatycznie doda komponent AudioSource do obiektu, jeœli go tam nie ma
+[RequireComponent(typeof(AudioSource))]
 public class AudioMenager : MonoBehaviour
 {
     public static AudioMenager Instance;
 
-    public AudioSource audioSource;
-    public AudioClip clickClip;  // mo¿esz dalej u¿ywaæ jako domyœlnego
+    public AudioClip clickClip;
 
-    public InteractableObject intObj;
+    // Referencja do "g³oœnika", który odtworzy dŸwiêk
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -15,6 +17,9 @@ public class AudioMenager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Pobieramy komponent AudioSource podpiêty do tego samego GameObjectu
+            audioSource = GetComponent<AudioSource>();
         }
         else
         {
@@ -22,22 +27,22 @@ public class AudioMenager : MonoBehaviour
         }
     }
 
-    // stary przyciskowy dŸwiêk
     public void PlayClick()
     {
         PlayClip(clickClip);
     }
 
-    // NOWA metoda – odtwarza dowolny klip
     public void PlayClip(AudioClip clip)
     {
+        // Sprawdzamy, czy przekazano klip oraz czy mamy AudioSource
         if (clip != null && audioSource != null)
         {
+            // Odtwarzamy przekazany klip u¿ywaj¹c AudioSource
             audioSource.PlayOneShot(clip);
         }
         else
         {
-            Debug.LogWarning("Brak clip lub audioSource w AudioMenager!");
+            Debug.LogWarning("Brak clip lub AudioSource w AudioMenager!");
         }
     }
 }
