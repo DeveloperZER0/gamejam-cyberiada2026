@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class ChestInteracion : MonoBehaviour
+public class OpenInteraction : BaseInteraction
 {
+    [SerializeField] private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +13,9 @@ public class ChestInteracion : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void Interact() {
+        animator.SetBool("isOpen", true);
     }
 }

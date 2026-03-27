@@ -35,7 +35,7 @@ public class InteractableObject : MonoBehaviour
 
     public void OnClicked()
     {
-        Debug.Log($"Przedmiot ({objectName}) zosta³ klikniêty");
+        Debug.Log($"Przedmiot ({objectName}) zostaÅ‚ klikniÄ™ty");
 
         if (interaction != null)
         {
