@@ -9,6 +9,14 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private BaseInteraction interaction;
     private bool isHovered = false;
 
+    [Header("Dźwięk")]
+    [SerializeField] private AudioClip interactionSound;   // <<-- tu przypisujesz dźwięk
+
+    public AudioClip objectSound
+    {
+        get { return interactionSound; }
+    }
+
     private void Awake()
     {
         interaction = GetComponent<BaseInteraction>();
@@ -35,7 +43,18 @@ public class InteractableObject : MonoBehaviour
 
     public void OnClicked()
     {
-        Debug.Log($"Przedmiot ({objectName}) został kliknięty");
+        Debug.Log($"ONCLICKED WYWOŁANE na obiekcie: {objectName}");
+
+        // Dźwięk dla tego konkretnego obiektu
+        if (AudioMenager.Instance != null)
+        {
+            // jeśli ustawiono własny dźwięk, zagra jego,
+            // jeśli nie – użyje domyślnego clickClip
+            if (interactionSound != null)
+                AudioMenager.Instance.PlayClip(interactionSound);
+            else
+                AudioMenager.Instance.PlayClick();
+        }
 
         if (interaction != null)
         {
