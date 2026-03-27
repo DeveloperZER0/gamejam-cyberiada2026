@@ -33,13 +33,11 @@ public class InputManager : MonoBehaviour
     private void HandleRaycast()
     {
         // pozycja myszy z nowego Input Systemu
-        Vector2 mouseScreenPos = Mouse.current.position.ReadValue();   // zamiast Input.mousePosition [web:8][web:16]
+        Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
 
-        Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(
-            new Vector3(mouseScreenPos.x, mouseScreenPos.y, mainCamera.nearClipPlane)
-        );
-
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, 0f, interactableLayer);
+        // Uzycie promienia kamery eliminuje bledy wynikajace z niepoprawnej glebokosci Z.
+        Ray ray = mainCamera.ScreenPointToRay(mouseScreenPos);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, interactableLayer);
 
         if (hit.collider != null)
         {
@@ -69,7 +67,7 @@ public class InputManager : MonoBehaviour
     private void HandleClick()
     {
         // lewy przycisk z nowego Input Systemu
-        if (Mouse.current.leftButton.wasPressedThisFrame && currentTarget != null)   // zamiast Input.GetMouseButtonDown(0) [web:8]
+        if (Mouse.current.leftButton.wasPressedThisFrame && currentTarget != null)
         {
             currentTarget.OnClicked();
         }

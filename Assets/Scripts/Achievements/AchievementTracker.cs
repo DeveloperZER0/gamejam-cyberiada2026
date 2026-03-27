@@ -26,8 +26,8 @@ public class AchievementTracker : MonoBehaviour
         // on clicking item marked as achievement set achievementShelf bitMask to 1 for that item
         if(Mouse.current.leftButton.wasPressedThisFrame) {
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit)) {
+            RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+            if(hit.collider != null) {
                 if(hit.collider.CompareTag("AchievementItem")) {
                     int itemIndex = hit.collider.GetComponent<AchievementItem>().itemIndex;
                     achievementShelf.SetBitMask(itemIndex);

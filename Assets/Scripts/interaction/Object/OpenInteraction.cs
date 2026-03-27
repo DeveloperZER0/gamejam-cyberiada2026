@@ -3,19 +3,31 @@ using UnityEngine;
 public class OpenInteraction : BaseInteraction
 {
     [SerializeField] private Animator animator;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool hasInteracted;
 
     public override void Interact() {
-        animator.SetBool("isOpen", true);
+        if (hasInteracted)
+        {
+            return;
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("OpenInteraction: Animator is not assigned.");
+            return;
+        }
+
+        hasInteracted = true;
+        FadeInAndOut(animator, "isOpen");
+
+        if (TryGetComponent(out Collider2D objectCollider))
+        {
+            objectCollider.enabled = false;
+        }
+
+        if (TryGetComponent(out InteractableObject interactableObject))
+        {
+            interactableObject.enabled = false;
+        }
     }
 }

@@ -6,7 +6,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Ustawienia")]
     [SerializeField] private string objectName = "Nieznany";
 
-    private BaseInteraction interaction;
+    [SerializeField] private BaseInteraction interaction;
     private bool isHovered = false;
 
     private void Awake()
