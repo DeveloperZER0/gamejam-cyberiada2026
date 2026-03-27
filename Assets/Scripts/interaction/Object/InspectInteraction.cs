@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class RotateInteraction : BaseInteraction
+public class InspectInteraction : BaseInteraction
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private bool isRotated = false;
+    [SerializeField] private bool isInspected = false;
     [SerializeField] private GameObject inspectedState;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,12 +21,12 @@ public class RotateInteraction : BaseInteraction
       // If in inspect state, rotate the object, otherwise reset rotation 
       // Use the same fade in and out animation as the open interaction 
       // On click outside of main collider, exit inspect state and reset rotation
-      if(!isRotated) {
+      if(!isInspected) {
         inspectedState.SetActive(true);
-        isRotated = true;
+        isInspected = true;
       } else {
         inspectedState.SetActive(false);
-        isRotated = false;
+        isInspected = false;
       }
     }
 }
