@@ -17,14 +17,31 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private int initialSceneIndex;
     [SerializeField] private bool preserveAnimatorStateOnDisable = true;
 
+    // Zmienione na AudioClip
+    public AudioClip fadeAudioClip;
+
+    // Prywatny AudioSource do odtworzenia klipu
+    private AudioSource audioSource;
+
     private bool isSwitching;
     private int currentSceneIndex = -1;
 
     void Start()
     {
+        SetupAudio();
         ConfigureAnimators();
         SwitchToIndexImmediate(initialSceneIndex);
         StartCoroutine(FadeIn());
+    }
+
+    private void SetupAudio()
+    {
+        // Sprawdzamy, czy obiekt ma ju¿ AudioSource. Jeœli nie, dodajemy go z poziomu kodu.
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void ConfigureAnimators()
@@ -102,6 +119,12 @@ public class SceneSwitcher : MonoBehaviour
     private IEnumerator FadeSwitch(int targetIndex)
     {
         isSwitching = true;
+
+        // Odtworzenie dŸwiêku z przypisanego klipu
+        if (fadeAudioClip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fadeAudioClip);
+        }
 
         yield return FadeOut();
         SetActivePseudoScene(targetIndex);

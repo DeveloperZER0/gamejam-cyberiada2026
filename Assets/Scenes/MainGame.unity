@@ -8352,6 +8352,7 @@ MonoBehaviour:
     rootObject: {fileID: 1694963382}
   initialSceneIndex: 0
   preserveAnimatorStateOnDisable: 1
+  fadeAudioClip: {fileID: 8300000, guid: 155ce7c80e2fbbe448dccf848643a2b7, type: 3}
 --- !u!4 &1000729348
 Transform:
   m_ObjectHideFlags: 0
@@ -11380,7 +11381,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a13851fab3a54e942aaaa8b263b6bb12, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.33
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12631,7 +12632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   objectName: Nieznany
   interaction: {fileID: 0}
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 06cea8006646ee94aa5a1b948804a7ce, type: 3}
 --- !u!60 &1981977478
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12779,7 +12780,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 83073e4b242784f5e97a2536b06c2be4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12811,7 +12812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2061355732
 Transform:
   m_ObjectHideFlags: 0
@@ -12830,8 +12831,8 @@ Transform:
   - {fileID: 980139302}
   - {fileID: 955829870}
   - {fileID: 1521880339}
-  - {fileID: 333853787}
   - {fileID: 1892843871}
+  - {fileID: 333853787}
   - {fileID: 1981977475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
