@@ -6,6 +6,7 @@ public class KeypadScript : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI screenText;
     [SerializeField] private GameObject targetObject;
+    [SerializeField] private GameObject parentSafe;
     [SerializeField] private string successParameterName = "keycode";
 
     public GameObject Keypad;
@@ -15,6 +16,7 @@ public class KeypadScript : MonoBehaviour
     private string code = "452785";
 
     private Animator animator;
+    private Animator parentAnimator;
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class KeypadScript : MonoBehaviour
         if (targetObject != null)
         {
             animator = targetObject.GetComponent<Animator>();
+            parentAnimator = parentSafe.GetComponent<Animator>();
         }
 
         if (animator == null)
@@ -59,6 +62,7 @@ public class KeypadScript : MonoBehaviour
             if (animator != null && !string.IsNullOrEmpty(successParameterName))
             {
                 animator.SetBool(successParameterName, true);
+                parentAnimator.SetBool("IsUnlocked", true);
             }
 
             Keypad.SetActive(false);
