@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public abstract class BaseInteraction : MonoBehaviour
 {
   [SerializeField] private GameObject fadeObject;
-  [SerializeField] private float fadeDuration = 1f;
+  [SerializeField] private float fadeDuration = 0.5f;
   private Image fadePanel;
 
     protected virtual void Awake() {
@@ -24,7 +24,7 @@ public abstract class BaseInteraction : MonoBehaviour
       // Start fade in animation, then wait for it to finish before animating the object, then start fade out animation
       if (fadeObject == null || fadePanel == null) {
         if (oAnimator != null && !string.IsNullOrEmpty(parameterName)) {
-          oAnimator.SetBool(parameterName, true);
+          oAnimator.SetBool(parameterName, !oAnimator.GetBool(parameterName));
         }
         return;
       }
@@ -38,7 +38,7 @@ public abstract class BaseInteraction : MonoBehaviour
       yield return FadeAlpha(0f, 1f);
 
       if (objectAnimator != null && !string.IsNullOrEmpty(parameterName)) {
-        objectAnimator.SetBool(parameterName, true);
+        objectAnimator.SetBool(parameterName, !objectAnimator.GetBool(parameterName));
 
         yield return null;
         yield return WaitForAnimationToFinish(objectAnimator);
