@@ -4,16 +4,29 @@ using System.Collections;
 
 public class KeypadScript : MonoBehaviour
 {
-    [SerializeField ]private TextMeshProUGUI screenText;
+    [SerializeField]private TextMeshProUGUI screenText;
 
     public GameObject Keypad;
 
     private string currentInput = "";
-    private int maxInput = 4;
-    private int code = 4527;
+    private int maxInput = 6;
+    private string code = "452785";
+
+    private Animator animator;
     void Start()
     {
         ClearScreen();
+        GameObject safeObject = GameObject.Find("Safe");
+
+        if (safeObject != null)
+        {
+            animator = safeObject.GetComponent<Animator>();
+            Debug.Log("Uda³o siê znaleŸæ Animator na obiekcie Sejf!");
+        }
+        else
+        {
+            Debug.LogError("B£¥D: Nie znaleziono w scenie obiektu o nazwie 'Sejf'!");
+        }
     }
 
     public void AddDigit(string digit)
@@ -39,9 +52,9 @@ public class KeypadScript : MonoBehaviour
 
     public void SubmitCode()
     {
-        if(code == int.Parse(currentInput))
+        if(code == currentInput)
         {
-            Debug.Log("Code correct! Door unlocked.");
+            animator.SetBool("IsUnlocked", true);
             Keypad.SetActive(false);
         }
         else
